@@ -18,3 +18,7 @@ require("plugin-config.telescope")
 require("plugin-config.dashboard")
 -- project
 require("plugin-config.project")
+-- treesitter 代码高亮
+require("plugin-config.nvim-treesitter")
+-- LSP
+require("lsp.setup")

@@ -51,12 +51,13 @@ ENV PATH="${PATH}:/usr/local/go/bin"
 ENV GO111MODULE="on"
 
 # 安装 neovim
+# unzip lua lsp 需要用
 RUN add-apt-repository ppa:neovim-ppa/unstable && apt-get update
 
-RUN apt-get install -y neovim
+RUN apt-get install -y neovim unzip
 
 # 拷贝配置
-COPY ./config /root/.config
+COPY ./config/nvim /root/.config/nvim
 
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -67,6 +68,15 @@ RUN apt install ./ripgrep_13.0.0_amd64.deb \
     && rm ripgrep_13.0.0_amd64.deb
 
 RUN npm install -g fd-find
+
+# 安装 C 编译器 (gcc)
+
+RUN apt install -y build-essential python3.8-venv
+
+# 安装插件
+
+RUN nvim -c "PackerSync" \
+         -c "qall"
 
 WORKDIR project
 

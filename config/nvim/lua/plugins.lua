@@ -22,4 +22,14 @@ packer.startup(
     use("glepnir/dashboard-nvim")
     -- project
     use("ahmedkhalf/project.nvim")
+    -- treesitter (代码高亮)
+    -- 这里的 run = ":TSUpdate" 是 Packer.nvim 的一个 Post-install hook，表示当组件安装或更新完成时会执行 :TSUpdate 命令。
+    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+    -- LSP
+    -- lsp server installer
+    use("williamboman/nvim-lsp-installer")
+    -- Lspconfig
+    use({ "neovim/nvim-lspconfig" })
+
+
   end)
