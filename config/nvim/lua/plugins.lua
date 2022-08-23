@@ -17,5 +17,9 @@ packer.startup(
     -- lualine lsp 扩展
     use("arkav/lualine-lsp-progress")
     -- telescope 文件模糊搜索
-    use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
+    use ({ 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } })
+    -- dashboard-nvim
+    use("glepnir/dashboard-nvim")
+    -- project
+    use("ahmedkhalf/project.nvim")
   end)
