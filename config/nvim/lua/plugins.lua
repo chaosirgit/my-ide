@@ -37,7 +37,6 @@ packer.startup(
     -- 支持 vsnip、luasnip、snippy、 ultisnips 4 种 snippet 引擎
     -- snippet 引擎就是自定义代码段的引擎，常见的有 vsnip、luasnip 等
     --
-    
     -- 补全引擎
     use("hrsh7th/nvim-cmp")
     -- snippet 引擎
@@ -48,8 +47,12 @@ packer.startup(
     use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-
-
+    -- 成对儿输入
+    use("jiangmiao/auto-pairs")
+    -- 注释插件
+    use("preservim/nerdcommenter")
+    -- 多焦点编辑
+    use("terryma/vim-multiple-cursors")
 
 
   end)

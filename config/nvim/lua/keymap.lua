@@ -7,6 +7,14 @@ vim.g.maplocalleader = " "
 -- options = {noremap = true,silent = true} noremap 表示不会重新映射 silent 表示不会输出多余信息
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
+-- 自带快捷键
+-- <C-n> 多行选择，下一个
+-- <C-p> 多行选择，上一个
+-- <C-x> 多行选择，跳过
+-- I 编辑
+-- <Leader>c<Leader> 注释/取消注释
+-- <Leader>cc 注释
+ --<Leader>cu 取消注释
 -- 分屏
 --   水平
 map('n', '<leader>ws', ":sp<CR>", opt)

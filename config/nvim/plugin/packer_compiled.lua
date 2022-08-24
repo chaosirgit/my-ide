@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
+  },
+  nerdcommenter = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    url = "https://github.com/preservim/nerdcommenter"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -183,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-multiple-cursors"] = {
+    loaded = true,
+    path = "/root/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
+    url = "https://github.com/terryma/vim-multiple-cursors"
   },
   ["vim-vsnip"] = {
     loaded = true,
