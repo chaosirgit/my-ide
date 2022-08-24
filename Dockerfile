@@ -73,11 +73,7 @@ RUN npm install -g fd-find
 
 RUN apt install -y build-essential python3.8-venv
 
-# 安装插件
-
-RUN nvim -c "PackerSync" \
-         -c "qall"
 
 WORKDIR project
 
-# CMD ["nvim"]
+CMD ["nvim"]
