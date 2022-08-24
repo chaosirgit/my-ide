@@ -30,6 +30,26 @@ packer.startup(
     use("williamboman/nvim-lsp-installer")
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
+    -- 代码补全
+    -- https://github.com/hrsh7th/nvim-cmp
+    -- nvim-cmp 是使用 Lua 编写的 补全引擎 插件。
+    -- 可以配置多种外部的补全源，
+    -- 支持 vsnip、luasnip、snippy、 ultisnips 4 种 snippet 引擎
+    -- snippet 引擎就是自定义代码段的引擎，常见的有 vsnip、luasnip 等
+    --
+    
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+
 
 
   end)
