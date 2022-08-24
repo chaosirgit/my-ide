@@ -22,8 +22,8 @@ map('n', "<A-Down>", "<C-w>j", opt)
 map('n', "<A-Left>", "<C-w>h", opt)
 map('n', "<A-Right>", "<C-w>l", opt)
 -- 命令行
-map('n', "<leader>ts", ":sp | terminal<CR>", opt)
-map('n', "<leader>th", ":vsp | terminal<CR>", opt)
+map('n', "<leader>ts", ":sp | terminal zsh<CR>", opt)
+map('n', "<leader>th", ":vsp | terminal zsh<CR>", opt)
 map('t', "<Esc>", "<C-\\><C-n><C-w>c", opt)
 map('t', "<A-Up>", [[ <C-\><C-N><C-w>k ]], opt)
 map('t', "<A-Down>", [[ <C-\><C-N><C-w>j ]], opt)
@@ -143,9 +143,9 @@ end
 pluginKeys.cmp = function(cmp)
   return {
     -- 出现补全
-    ["<A-p>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-p>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     -- 取消
-    ["<A-q>"] = cmp.mapping({
+    ["<C-q>"] = cmp.mapping({
       i = cmp.mapping.abort(),
       c = cmp.mapping.close()
     }),

@@ -22,3 +22,5 @@ require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 -- LSP
 require("lsp.setup")
+-- 自动补全
+require("lsp.cmp")
