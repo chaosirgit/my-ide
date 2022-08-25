@@ -73,6 +73,10 @@ RUN npm install -g fd-find
 
 RUN apt install -y build-essential python3.8-venv
 
+# 设置 Git 用户名
+
+RUN git config --global user.name "Ethan Kuo" \ 
+    && git config --global user.email "mrnicolascoge@gmail.com" \
 
 WORKDIR project
 
