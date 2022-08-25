@@ -7,7 +7,6 @@ packer.startup(
     -- 主题
     use 'folke/tokyonight.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'rktjmp/lush.nvim'
     -- 目录树
     use ({'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'})
     -- buffer
@@ -48,11 +47,11 @@ packer.startup(
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     -- 成对儿输入
-    use("jiangmiao/auto-pairs")
+    -- https://github.com/windwp/nvim-autopairs
+    use("windwp/nvim-autopairs")
     -- 注释插件
-    use("preservim/nerdcommenter")
+    use("numToStr/Comment.nvim")
     -- 多焦点编辑
-    use("terryma/vim-multiple-cursors")
-
+    use("mg979/vim-visual-multi")
 
   end)

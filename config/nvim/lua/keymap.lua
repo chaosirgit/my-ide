@@ -7,14 +7,7 @@ vim.g.maplocalleader = " "
 -- options = {noremap = true,silent = true} noremap 表示不会重新映射 silent 表示不会输出多余信息
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
--- 自带快捷键
--- <C-n> 多行选择，下一个
--- <C-p> 多行选择，上一个
--- <C-x> 多行选择，跳过
 -- I 编辑
--- <Leader>c<Leader> 注释/取消注释
--- <Leader>cc 注释
- --<Leader>cu 取消注释
 -- 分屏
 --   水平
 map('n', '<leader>ws', ":sp<CR>", opt)
@@ -172,5 +165,37 @@ pluginKeys.cmp = function(cmp)
   }
 end
 
+-- Comment.nvim 注释插件
+pluginKeys.comment = {
+    ---LHS of toggle mappings in NORMAL + VISUAL mode
+  ---@type table
+  --NORMAL Mode
+  toggler = {
+    ---Line-comment toggle keymap
+    line = "<Leader>cc",
+    ---Block-comment toggle keymap
+    block = "<Leader>cb",
+  },
+
+  ---LHS of operator-pending mappings in NORMAL + VISUAL mode
+  ---@type table
+  -- VISUAL Mode
+  opleader = {
+    ---Line-comment keymap
+    line = "cc",
+    ---Block-comment keymap
+    block = "cb",
+  },
+
+}
+-- 多行编辑
+-- select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+-- create cursors vertically with Ctrl-Down/Ctrl-Up
+-- select one character at a time with Shift-Arrows
+-- press n/N to get next/previous occurrence
+-- press [/] to select next/previous cursor
+-- press q to skip current and get next occurrence
+-- press Q to remove current cursor/selection
+-- start insert mode with i,a,I,A
 
 return pluginKeys

@@ -24,3 +24,7 @@ require("plugin-config.nvim-treesitter")
 require("lsp.setup")
 -- 自动补全
 require("lsp.cmp")
+-- 成对儿输入
+require("plugin-config.autopairs")
+-- 注释
+require("plugin-config.comment")
